@@ -1,0 +1,80 @@
+form{
+    display:flex;
+    flex-direction:column;
+    border:none;
+    border-radius:20px 20px 0px 0px;
+    background-color:white;
+    padding:1vw;
+    margin:0;
+}
+
+#amounts{
+    display:flex;
+    justify-content: space-between;
+    gap:20px;
+}
+
+.amounts{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+#heading{
+    display:flex;
+    justify-content: space-between;
+}
+
+#heading button{
+    border:none;
+    background-color:transparent;
+}
+
+.types{
+    flex:1;
+    border:3px solid lightblue;
+    padding:10px;
+    border-radius:5px;
+}
+
+.types:focus-within{
+    flex:1;
+    border:3px solid lime;
+    background-color: rgb(205, 252, 205);
+}
+
+body{
+    background-color:lightblue;
+    padding:2vw;
+    font-family:arial;
+    font-weight:bold;
+}
+
+form > *:not(span *) {
+    margin:10px;
+}
+
+input[type = number]{
+    padding:10px;
+    border:3px solid lightblue;
+    border-radius: 5px;
+}
+
+input[type = number]:focus{
+    border: blue !important;
+}
+
+#submit{
+    background-color: lime;
+    padding:15px 30px 15px 30px;
+    border:none;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+#res{
+    margin:0;
+    color:white;
+    background-color:rgb(45, 45, 92);
+    padding:20px;
+}

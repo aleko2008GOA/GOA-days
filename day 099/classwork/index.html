@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adjusting HTML</title>
+        <style>
+            #container{
+                display:flex;
+                justify-content: space-between;
+                gap:20px;
+            }
+            img{
+                width:20vw;
+            }
+            #cont{
+                display: flex;
+                flex-direction: column;
+                border:2px solid;
+                border-radius:10px;
+                padding:20px;
+            }
+            button{
+                font-size:20px;
+                padding:10px;
+                background-color:black;
+                color:white;
+                border:none;
+                border-radius:5px;
+                width:100%;
+            }
+            #form{
+                margin:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <div id = "container">
+
+        </div>
+        <form id = "form">
+            <input type = "text" placeholder = "Title" name = "title" id = "title"><br>
+            <input type = "text" placeholder = "Description" name = "info" id = "info"><br>
+            <input type = "text" placeholder = "Id" name = "id" id = "id"><br>
+            <input type = "submit" id = "submit" name = "submit">
+        </form>
+        <div id = "data">
+
+        </div>
+        <script>
+            const container = document.getElementById("container");
+
+            async function ajdusting(api){
+                try{
+                    const res = await fetch(api);
+                    const ans = await res.json();
+
+                    ans.forEach(val =>{
+                        const html = `
+                            <div id = "cont">
+                                <h3>Id:${val.id}, ${val.title}</h3>
+                                <p><button>${val.price}$</button></p>
+                                <p>${val.description}</p>
+                                <div><img src = "${val.image}"></div>
+                            </div>
+                        `
+                        container.insertAdjacentHTML("beforeend", html);
+                    });
+                }catch(err){
+                    console.log("Error: " + err);
+                }
+            }
+
+            ajdusting("https://fakestoreapi.com/products/category/jewelery");
+
+            const form = document.getElementById("form");
+            const data = document.getElementById("data");
+
+            form.addEventListener("submit", () =>{
+                event.preventDefault();
+                
+                const body = {
+                    method: "POST",
+                    body: JSON.stringify({
+                        title: form.elements.title.value,
+                        description: form.elements.info.value,
+                        id: form.elements.id.value
+                    }),
+                    headers: {
+                        "Content-type": "application/json"
+                    }
+                }
+
+                post(body, 'https://fakestoreapi.com/products');
+            });
+
+            async function post(body, api){
+                try{
+                    const res = await fetch(api, body);
+                    const ans = await res.json();
+
+                    const html = `
+                        <p>Title: ${ans.title},<br>Body: ${ans.description},<br>Id: ${ans.id}</p>
+                    `
+
+                    data.insertAdjacentHTML("beforeend", html);
+                }catch(err){
+                    console.log(err);
+                }
+            }
+        </script>
+    </body>
+</html>

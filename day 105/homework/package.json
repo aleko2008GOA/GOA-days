@@ -1,0 +1,16 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel ./src/signin.html",
+    "build": "parcel build ./scr/signin.html"
+  },
+  "keywords": [],
+  "author": "Alex Melikajnian",
+  "license": "ISC",
+  "description": "We are trying to make a bank account egsample",
+  "repository": "https://github.com/aleko2008GOA/GOA-homework",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}

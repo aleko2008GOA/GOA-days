@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project For Parcel</title>
+        <link rel="stylesheet" href="/signin.2cdaf7bc.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="navlinks">
+                    <a class="indexlink" href="/bankmainpage.html"><h3>OUR BANK</h3></a>
+                    <div>
+                        <a href="">Private Police</a>
+                        <a class="support" href="">Support</a>
+                    </div>
+                </div>
+                <div class="signforms">
+                    <a href="/signin.html"><button>Sign in</button></a>
+                    <a href="/signup.html"><button>Sign up</button></a>
+                </div>
+            </nav>
+        </header>
+        <main style="color: #275292" id="main">
+            <div id="when_no_acc">
+                <img style="width: 400px" src="/noacc.d899c997.jpg">
+                <p style="margin-left: 50px">Looks like you are out of account</p>
+                <h2 style="margin-left: 50px"><i>You need to <a href="/signin.html">sign in</a> first</i></h2>
+            </div>
+
+            <div id="cards_balance">
+                <div id="balance">
+                    <div>My balance: <h2 id="my_balance"> - $</h2></div>
+                    <div>Can be used: <h2 id="can_be_used"> - $</h2></div>
+                </div>
+                <div id="vertical_line"></div>
+                <div id="add">
+                    <div id="my_cards">
+                        <div>
+                            <p>My cards:</p>
+                            <span>
+                                <button id="add_card">Add card</button>
+                                <button id="remove_card">Remove card</button>
+                            </span>
+                        </div>
+                        <div id="cards"></div>
+                    </div>
+                    <div id="horizontal_line"></div>
+                    <div id="my_storage">
+                        <div>
+                            <p id="stror">My storage </p>
+                            <button id="add_to_storage">Add to storage</button>
+                            <button id="remove_from_storage">Remove from storage</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form style="flex-direction: column; gap: 10px; width: 30vw; margin: 0 0 20px 20px; display: flex" id="send_form">
+                <h1>Send</h1>
+                <label>Your card number</label>
+                <input name="number" type="number">
+                <label>Money</label>
+                <input name="money" type="number">
+                <label>Card number</label>
+                <input name="card_number" type="number">
+                <label>PIN</label>
+                <input name="pin" type="password">
+                <input type="submit">
+            </form>
+        </main>
+        <script src="/bankmainpage.f5c48570.js" defer=""></script>
+    </body>
+</html>

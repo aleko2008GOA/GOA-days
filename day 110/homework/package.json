@@ -1,0 +1,21 @@
+{
+  "name": "devcommerce-hotel",
+  "version": "1.0.0",
+  "description": "This is website called DevCommerce Hotel",
+  "scripts": {
+    "start": "parcel ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tezeladata/DevCommerce-Hotel.git"
+  },
+  "author": "David Tezelashvili, Alex Melikjanian, Nikoloz Popkhadze, Sandro Jalaghonia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tezeladata/DevCommerce-Hotel/issues"
+  },
+  "homepage": "https://github.com/tezeladata/DevCommerce-Hotel#readme",
+  "dependencies": {
+    "parcel": "^2.12.0"
+  }
+}

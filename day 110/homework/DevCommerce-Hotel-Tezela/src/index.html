@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevCommerce Hotel</title>
+
+    <!-- css -->
+    <link rel = "stylesheet" href = "style.css">
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/b5998aa8b2.js" crossorigin="anonymous"></script>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- favicon -->
+</head>
+<body>
+    <!-- სარეგისტრაციო ფორმები და ნავიგაციური პანელი, ფორმები არ ჩანან სანამ არ დააჭერ ღილაკს -->
+    
+    
+    <!-- <nav> -->
+    <nav>
+        <h3>Hotel</h3>
+        <div>
+            <button class = "sign_up_but">sign_up</button>
+            <button class = "sign_in_but">sign_in</button>
+            <button class = "sign_out_but">sign_out</button>
+            <div id = "profile_but" style = "flex-direction: column;">
+                <img id = "user_profile" src = "https://ohsobserver.com/wp-content/uploads/2022/12/Guest-user.png">
+                <label id = "user_name">Guest</label>
+            </div>
+        </div>
+    </nav>
+    <div id = 'profile'>
+        <h4 id = "name_profile">Hello Guest,</h4>
+        <p>
+            Welcome to DevCommerce! We’re delighted to have you as our guest and are committed to making your stay as comfortable and enjoyable as possible. If you need any assistance or have any special requests, please don't hesitate to let us know.
+        </p>
+        <div class = "in_profile">
+            <label class = "in_profile">Email: </label>
+            <label class = "in_profile" id = "profile_mail"></label>
+        </div>
+        <p class = "in_profile">Books:</p>
+        <div class = "in_profile" id = "profile_books">
+            My books
+        </div>
+        <div>
+            <button class = "sign_up_but">sign_up</button>
+            <button class = "sign_in_but">sign_in</button>
+            <button class = "sign_out_but">sign_out</button>
+        </div>
+    </div>
+    <!-- sign up -->
+    <form id = "sign_up">
+        <h1>Sign up</h1>
+        <section>
+            <label for = "f_name">First name</label>
+            <input type = "text" name = "f_name" id = "f_name" placeholder = "First name" requred>
+        </section>
+        <section>
+            <label for = "l_name">Last name</label>
+            <input type = "text" name = "l_name" id = "l_name" placeholder = "Last name">
+        </section>
+        <section>
+            <label for = "email">Email</label>
+            <input type = "email" name = "email" id = "email" placeholder = "example@gmail.com" required>
+        </section>
+        <section>
+            <label for = "password">Password</label>
+            <input type = "password" name = "password" id = "password" minlength = "8" placeholder = "At least 8 characters" required>
+        </section>
+        <section>
+            <label for = "birthday">Birthday</label>
+            <input type = "date" name = "birthday" id = "birthday" required>
+        </section>
+        <section>
+            <label for = "phone">Phone number</label>
+            <select id = "your_country">
+                <option id = "usa">USA (+1)</option>
+                <option id = "china">Chi (+86)</option>
+                <option id = "russia">Rus (+7)</option>
+                <option id = "portugal">Por (+351)</option>
+                <option id = "germany">Ger (+48)</option>
+                <option id = "france">Frc (+33)</option>
+                <option id = "georgia">Geo (+995)</option>
+            </select>
+            <input type = "tel" name = "phone" id = "phone" placeholder = "123-456-789" pattern="\d{9}" maxlength="9">
+        </section>
+        <section>
+            <div id = "account_already_exist"><i style = "color:orange" class="fas fa-exclamation-circle"></i> Accaunt with this email already exist</div>
+            <input type = "submit">
+            <input class = "reset_form" type = "reset">
+        </section>
+    </form>
+    <!-- sign in -->
+    <form id = "sign_in">
+        <h1>Sign in</h1>
+        <section>
+            <label for = "email_log_in">Email</label>
+            <input type = "email" name = "email" id = "email_log_in" placeholder = "example@gmail.com" required>
+        </section>
+        <section>
+            <label for = "password_log_in">Password</label>
+            <input type = "password" name = "password" id = "password_log_in" minlength = "8" placeholder = "At least 8 characters" required>
+        </section>
+        <section>
+            <div id = "error_message"><i style = "color:orange" class="fas fa-exclamation-circle"></i> Invalid email or password</div>
+            <input type = "submit">
+            <input class = "reset_form" type = "reset">
+        </section>
+    </form>
+
+    <!-- დანარჩენი (წესით header ში უნდა იყოს ნავიგაციური პანელი, მაგრამ მაშინ დიზაინი შეიცვლებოდა) -->
+    <header>
+        <!-- შავად რომ ჩანდ დასაწყისში ეგ ჰედერია ეს -->
+        <section id="header-top">
+            <!-- მარცხენა მხარე -->
+            <div id="header-top-left-side">
+                <p><i class="fa-solid fa-phone"></i> +1 (234) 567 890</p>
+                <p><i class="fa-solid fa-envelope-open-text"></i> devcommerce@mail.com</p>
+            </div>
+
+            <!-- მარჯვენა მხარე -->
+            <div id="header-top-right-side">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </section>
+
+        <!-- ქვემოთა ჰედერი -->
+        <section id="header-bottom">
+            <!-- მარცხენა მხარე -->
+            <div id="header-bottom-left-side">
+                <!-- ლოგოს სურათი აქ -->
+                <!-- <img src="" alt="Main logo"> -->
+            </div>
+
+            <!-- მარჯვენა მხარე -->
+            <div id="header-bottom-left-side">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Rooms</a>
+                <a href="#">Restaurant</a>
+                <a href="#">Offers</a>
+                <span><a href="#">Book Now</a></span>
+            </div>
+        </section>
+    </header>
+
+    <!-- საიტის მთავარი ნაწილი -->
+    <main>
+
+
+        <!-- Hero -->
+        <section id="hero">
+            <!-- hero container მარტივი flex-ის გასაწერად -->
+            <div id="hero-container">
+
+                <!-- მარცხენა მხარე -->
+                <div id="hero-left">
+                    <h3>DevCommerce Hotel</h3>
+                    <h1>Welcome to the oasis of luxury & tranquility</h1>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta commodi in delectus aliquam, saepe ipsam voluptatibus sapiente, sit debitis iusto et architecto omnis. Atque, aliquam. Dolor quisquam voluptas soluta exercitationem, nobis consequuntur unde quos facere tempore excepturi tenetur mollitia. Quo!</p>
+
+                    <span>Discover More</span>
+                </div>
+
+                <!-- მარჯვენა მხარე -->
+                <div id="hero-right">
+                    <!-- სურათი ან ვიდეო აქ -->
+                </div>
+            </div>
+
+            <!-- booking ადგილი -->
+            <div id="booking-div">
+
+                <!-- აქ grid შეიძლება -->
+                <div id="booking-container">
+                    <div id="booking-container-part1">
+                        <p>Check In *</p>
+            
+                        <!-- ეს შესაცვლელი იქნება -->
+                        <input id = "check_in" type="date">
+                    </div>
+            
+                    <div id="booking-container-part2">
+                        <p>Check Out *</p>
+            
+                        <!-- ეს შესაცვლელი იქნება -->
+                        <input id = "check_out" type="date">
+                    </div>
+            
+                    <div id="booking-container-part3">
+                        <p>Room Id *</p>
+            
+                        <!-- ეს შესაცვლელი იქნება -->
+                        <input id = "room_id" type="number" placeholder = "Room id">
+                    </div>
+            
+                    <div id="booking-container-part4">
+                        <p>Person *</p>
+            
+                        <!-- ეს შესაცვლელი იქნება -->
+                        <select id="people_will_live">
+                            <option value="1 person">1 Person</option>
+                            <option value="2 person">2 Person</option>
+                            <option value="3 person">3 Person</option>
+                        </select>
+                    </div>
+            
+                    <div id="booking-container-part5">
+                        <div id = "booking_error_message"><i style = "color:orange" class="fas fa-exclamation-circle"></i></div>
+                        <button id="submit_book">Book now</button>
+                    </div>
+            
+                    <div id="booking-container-part6">
+                        <p id = "total_price"></p>
+                        <button id = "sure_to_make_a_book">I am sure</button>
+                        <button id = "not_sure_to_make_a_book">Cancle</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- about us -->
+        <section id="about-us">
+
+            <!-- მარცხენა მხარე -->
+            <div id="about-us-left-side">
+                <!-- სურათი აქ -->
+            </div>
+
+            <!-- მარჯვენა მხარე -->
+            <div id="about-us-right-side">
+                <h3>About Us</h3>
+                <h2>We raise the bar in hotel hospitality</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, facilis? Laboriosam reprehenderit amet est corporis aut pariatur ut consectetur voluptate.</p>
+
+                <div id="about-us-container">
+                    <div id="about-us-cont-1">
+                        <span>Our Vision</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic qui deserunt magnam corporis adipisci voluptas.</p>
+                    </div>
+                    
+                    <div id="about-us-cont-2">
+                        <span>Our Mission</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quasi asperiores iste expedita placeat quidem!</p>
+                    </div>
+                </div>
+
+                <span>Discover More</span>
+            </div>
+        </section>
+
+
+        <!-- rooms -->
+        <section id="rooms">
+            <h3>Our rooms</h3>
+            <h2>The most comfortable</h2>
+
+            <!-- კონტეინერ დივი რათა მარტივად მოხდეს დალაგება -->
+            <div id="rooms-container">
+
+                <!-- part1 -->
+                <div id="rooms-part1">
+                    <!-- <img src="" alt=""> -->
+                    <h4>Luxury Room (id: 12345)</h4>
+                    <div class="rooms-info-div">
+                        <span><i class="fa-solid fa-bed">2 Beds</i></span>
+                        <span><i class="fa-solid fa-bath">2 Baths</i></span>
+                        <span><i class="fa-solid fa-warehouse">1200 sqft</i></span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut velit obcaecati minima culpa impedit suscipit?</p>
+                    <div class="rooms-price-div">
+                        <a class = "book_now" href = "#booking-container"><span>Book now <i class="fa-solid fa-arrow-right"></i></span></a>
+                        <p><span>$120</span> / night</p>
+                    </div>
+                </div>
+
+                <!-- part2 -->
+                <div id="rooms-part2">
+                    <!-- <img src="" alt=""> -->
+                    <h4>Business Room (id: 23456)</h4>
+                    <div class="rooms-info-div">
+                        <span><i class="fa-solid fa-bed">1 Beds</i></span>
+                        <span><i class="fa-solid fa-bath">1 Baths</i></span>
+                        <span><i class="fa-solid fa-warehouse">1400 sqft</i></span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut velit obcaecati minima culpa impedit suscipit?</p>
+                    <div class="rooms-price-div">
+                        <a class = "book_now" href = "#booking-container"><span>Book now <i class="fa-solid fa-arrow-right"></i></span></a>
+                        <p><span>$100</span> / night</p>
+                    </div>
+                </div>
+
+                <!-- part3 -->
+                <div id="rooms-part3">
+                    <!-- <img src="" alt=""> -->
+                    <h4>Villa Suit (id: 67786)</h4>
+                    <div class="rooms-info-div">
+                        <span><i class="fa-solid fa-bed">3 Beds</i></span>
+                        <span><i class="fa-solid fa-bath">3 Baths</i></span>
+                        <span><i class="fa-solid fa-warehouse">2050 sqft</i></span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut velit obcaecati minima culpa impedit suscipit?</p>
+                    <div class="rooms-price-div">
+                        <a class = "book_now" href = "#booking-container"><span>Book now <i class="fa-solid fa-arrow-right"></i></span></a>
+                        <p><span>$240</span> / night</p>
+                    </div>
+            </div>
+
+            <!-- მაგ ოთხი დივის შემდეგ ინფო ქვემოთ -->
+            <h2>DevCommerce Hotel is a peaceful paradise for you to relax and rest your soul, or just to have fun with your friends, couples, or family.</h2>
+            <hr> <!--ეს hr წაიშლება უბრალოდ რომ მიხვდეთ სად ვართ-->
+            <div id="rooms-container2">
+                <!-- აქ id/class არ ჭირდება დივს, მარტივად განლაგდება ისედაც -->
+                <div>
+                    <p>12+</p>
+                    <span>Years Experience</span>
+                </div>
+                <div>
+                    <p>105+</p>
+                    <span>Rooms Available</span>
+                </div>
+                <div>
+                    <p>34K+</p>
+                    <span>Happy Customers</span>
+                </div>
+                <div>
+                    <p>485+</p>
+                    <span>Profeessional Staffs</span>
+                </div>
+            </div>
+            <hr> <!--ეს hr წაიშლება უბრალოდ რომ მიხვდეთ სად ვართ-->
+
+            <!-- ორი სურათი -->
+            <div id="rooms-container3">
+                <!-- <img src="" alt="">
+                <img src="" alt=""> -->
+            </div>
+        </section>
+
+
+        <!-- restaurant -->
+        <section id="restaurant">
+
+            <!-- მარცხენა მხარე -->
+            <div id="restaurant-left">
+                <!-- სამი სურათი აქ -->
+            </div>
+
+            <!-- მარჯვენა მხარე -->
+            <div id="restaurant-right">
+                <h3>OUR RESTAURANT</h3>
+                <h2>Enjoy the best food cooked by our professional chefs</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam modi nulla eveniet nam. Soluta dolorem voluptas exercitationem dolor cupiditate deserunt libero est iure quaerat, eligendi, dolorum rem error repellendus voluptatem.</p>
+                <span>See Our Menu</span>
+            </div>
+        </section>
+
+
+        <!-- Offers -->
+        <section id="offers">
+            <h3>Our Offers</h3>
+            <h2>An experience of wellness</h2>
+
+            <div id="offers-container">
+                <!-- აქ grid-ით იქნება კარგი -->
+                <div id="offers-part1">
+                    <!-- სურათი აქ -->
+                </div>
+
+                <div id="offers-part2">
+                    <h3>End Year Promo</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, qui beatae libero esse minus recusandae.</p>
+                    <span>Read More <i class="fa-solid fa-arrow-right"></i></span>
+                </div>  
+                
+                <div id="offers-part3">
+                    <!-- სურათი აქ -->
+                </div>
+
+                <div id="offers-part4">
+                    <h3>Free Dinner</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, qui beatae libero esse minus recusandae.</p>
+                    <span>Read More <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <div id="offers-part5">
+                    <!-- სურათი აქ -->
+                </div>
+
+                <div id="offers-part6">
+                    <h3>30% off for ABC Card</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, qui beatae libero esse minus recusandae.</p>
+                    <span>Read More <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- პირდაპირ footer, გამოვტოვე reviews, gallery და articles -->
+    <footer>
+
+        <!-- ეს ზემო 2 რაც არის -->
+        <section id="footer-part1">
+            <div id="footer-part1-left">
+                <h3>Our Rooms</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum magni atque dolor, animi odit velit exercitationem corrupti sapiente et deserunt doloribus. Et dolore nostrum cumque?</p>
+                <span>Explore Room <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+
+            <div id="footer-part1-right">
+                <h3>Contact Us</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum magni atque dolor, animi odit velit exercitationem corrupti sapiente et deserunt doloribus. Et dolore nostrum cumque?</p>
+                <span>Contact Us <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+        </section>
+
+        <!-- newsletter ამოვაკელი -->
+
+        <!-- ეს უკვე მთავარი ნაწილი footer-ის -->
+        <!-- ამაზეც grid კარგი იქნება -->
+        <div id="footer-container">
+            <div id="footer-cont-1">
+                <!-- ლოგო აქ -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, non.</p>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+
+            <div id="footer-cont-2">
+                <h3>Contacts</h3>
+                <p><i class="fa-solid fa-location-dot"> 457 Morningview Lane, NY</i></p>
+                <p><i class="fa-solid fa-phone"></i> +1 (234) 567 890</p>
+                <p><i class="fa-solid fa-envelope-open-text"></i> devcommerce@mail.com</p>
+            </div>
+            
+            <div id="footer-cont-3">
+                <h3>Quicklinks</h3>
+                <p>Home</p>
+                <p>About</p>
+                <p>Rooms</p>
+                <p>Restaurant</p>
+                <p>Offers</p>
+            </div>
+
+            <div id="footer-cont-4">
+                <h3>Supports</h3>
+                <p>Support Desk</p>
+                <p>Career</p>
+                <p>FAQs</p>
+                <p>Contact</p>
+                <p>Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+    <!-- script link -->
+    <script src = "script.js"></script>
+</body>
+</html>

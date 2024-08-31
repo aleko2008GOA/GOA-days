@@ -1,0 +1,196 @@
+nav {
+  color: #fff;
+  background-color: #00aeff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  display: flex;
+}
+
+body {
+  margin: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navlinks {
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  display: flex;
+}
+
+.navlinks div {
+  gap: 1vw;
+  display: flex;
+}
+
+.signforms {
+  align-items: center;
+  gap: 5px;
+  display: flex;
+}
+
+.signforms button {
+  color: #00f;
+  background-color: #0000;
+  border: 2px solid #00f;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 17px;
+  font-weight: 900;
+  transition: all .5s;
+}
+
+.signforms button:hover {
+  color: #fff;
+  background-color: #00f;
+}
+
+.signforms button:active {
+  color: #fff;
+  background-color: #00f;
+  box-shadow: 0 0 20px #00f;
+}
+
+.indexlink h3 {
+  margin: 0;
+}
+
+.mainForms {
+  justify-content: center;
+  display: flex;
+}
+
+.container {
+  background-color: #d3d3d3;
+  border: none;
+  border-radius: 20px;
+  flex-direction: column;
+  gap: 5px;
+  width: 50%;
+  margin: 10vh;
+  padding: 20px;
+  display: flex;
+}
+
+.signing {
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
+}
+
+.accaunt button, #resetSignIn, #submitSignIn, #submitSignUp, #resetSignUp {
+  color: #00f;
+  background-color: #0000;
+  border: 1px solid #00f;
+  border-radius: 3px;
+  padding: 3px 7px;
+  transition: all .5s;
+}
+
+.accaunt button:hover, #resetSignIn:hover, #submitSignIn:hover, #submitSignUp:hover, #resetSignUp:hover {
+  color: #fff;
+  background-color: #00f;
+}
+
+.accaunt button:active, #resetSignIn:active, #submitSignIn:active, #submitSignUp:active, #resetSignUp:active {
+  color: #fff;
+  background-color: #00f;
+  box-shadow: 0 0 10px #00f;
+}
+
+.accaunt {
+  text-decoration: none;
+}
+
+.signing input {
+  border: 1px solid #00f;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px 3px;
+}
+
+.signing input:focus {
+  outline: 1px solid #00f;
+}
+
+#cards_balance {
+  background-color: #add8e6;
+  border: none;
+  border-radius: 20px;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+}
+
+#cards_balance button {
+  background-color: #0000;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#cards_balance button:hover {
+  outline: 1px solid;
+}
+
+#vertical_line {
+  background-color: #000;
+  width: 1px;
+  height: 100%;
+  margin: 20px;
+}
+
+#add {
+  flex-grow: 1;
+}
+
+#horizontal_line {
+  background-color: #000;
+  width: 100%;
+  height: 1px;
+  margin: 16px 0;
+}
+
+#my_cards, #my_storage {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+#add form {
+  flex-direction: column;
+  gap: 6px;
+  margin-left: auto;
+  display: flex;
+}
+
+#add form input {
+  background-color: #f0f8ff;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+#add form input[type="submit"], #add form input[type="button"] {
+  background-color: #0000;
+}
+
+#add form input[type="submit"]:hover, #add form input[type="button"]:hover {
+  outline: 1px solid;
+}
+
+#cards {
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  display: flex;
+}
+/*# sourceMappingURL=signin.2cdaf7bc.css.map */

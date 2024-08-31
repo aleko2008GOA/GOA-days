@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>basic form</title>
+    </head>
+    <body>
+        <form id = "signup" onsubmit = "saveFormData()">
+            <label>Gmail</label><br>
+            <input type="email" placeholder = "abcdefg@gmail.com" id="email"><br>
+            <label>Password</label><br>
+            <input type="password" placeholder = "password" id="password"><br>
+            <input type="submit">
+        </form>
+
+        <form id = "signin" onsubmit = "appendData()">
+            <label>Gmail</label><br>
+            <input type="email" placeholder = "abcdefg@gmail.com" id="email1"><br>
+            <label>Password</label><br>
+            <input type="password" placeholder = "password" id="password1"><br>
+            <input type="submit">
+        </form>
+        <script>
+            const signUpForm = document.getElementById("signup");
+            const signInForm = document.getElementById("signin");
+            const user = [];
+            class users{
+                #password;
+                constructor(email, password){
+                    this.email = email;
+                    this.#password = password;
+                }
+
+                get password(){
+                    return this.#password;
+                }
+            }
+            function saveFormData(){
+                event.preventDefault();
+                user.push(new users(signUpForm.email.value, signUpForm.password.value));
+                alert("accaunt created");
+            }
+            function appendData(){
+                event.preventDefault();
+                const acc = user.find((obj) => obj.email == signInForm.email1.value);
+                console.log(acc)
+                if(acc.password == signInForm.password1.value){
+                    alert("Succesfuly signedin");
+                }else{
+                    alert("no")
+                }
+            }
+        </script>
+    </body>
+</html>

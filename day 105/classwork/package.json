@@ -1,0 +1,16 @@
+{
+  "name": "classwork",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "We aree trying to learn parcel",
+  "repository": "https://github.com/aleko2008GOA/parcel.git",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}

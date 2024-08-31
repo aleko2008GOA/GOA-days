@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- linking React and ReactDOM -->
+
+    <!-- React is used to create elements -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <!-- ReactDOM is used to append created elements in our HTML file -->
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- conecting bable to transfer HTML code into React -->
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+    <title>React Example</title>
+</head>
+<body>
+    <div id = "root"></div>
+    <!-- type text/babel means that we are using jsx and code will bw transfermed into React code -->
+    <script type = "text/babel">
+        // new const
+        const name = "Alex";
+        // function to return HTML code
+        function App(){
+            return (
+                <div>
+                    <p>Hello {name}</p>
+                </div>
+            )
+        }
+        // rendering code and appending to element with i 'root'
+        ReactDOM.render(App(), document.getElementById('root'));
+
+        function create(container, attr, value){
+            const elem = document.createElement(container);
+            elem.innerHTML = value;
+            if(attr.class) elem.classList.add(attr.class);
+            if(attr.id) elem.id = attr.id;
+            console.log(elem);
+        }
+
+        create('p', {id: "a", class: "b"}, "hello");
+    </script>
+</body>
+</html>

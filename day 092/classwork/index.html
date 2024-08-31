@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>basic form</title>
+    </head>
+    <body>
+        <form onsubmit = "saveFormData()">
+            <label>First name</label><br>
+            <input placeholder = "Fname" id = "fname" type = "text"><br>
+            <label>Last name</label><br>
+            <input placeholder = "Lname" id = "lname" type = "text"><br>
+            <label>Gmail</label><br>
+            <input type="email" placeholder = "abcdefg@gmail.com" id="email"><br>
+            <label>Password</label><br>
+            <input type="password" placeholder = "password" id="password"><br>
+            <input type="submit">
+        </form>
+
+        <script>
+            let arr = [];
+            class users{
+                constructor(fname, lname, mail, password){
+                    this.fname = fname;
+                    this.lname = lname;
+                    this.mail = mail;
+                }
+            }
+
+            function saveFormData(){
+                event.preventDefault();
+                let formData = document.getElementsByTagName('form');
+                let fname = document.getElementById('fname').value;
+                let lname = document.getElementById('lname').value;
+                let mail = document.getElementById('email').value;
+                let password = document.getElementById('password').value;
+                let user = new users(fname, lname, mail);
+                arr.push(user);
+                console.log(arr);
+            }
+        </script>
+    </body>
+</html>

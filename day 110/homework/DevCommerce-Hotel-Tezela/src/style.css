@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed";
+}
+
+:root{
+    --dark: #191D21;
+    --gold: #F9D8AD;
+    --gray: #EDEEF0;
+}
+
+
+/* section */
+section{
+    padding: 0 20% 0 20%;
+}
+
+
+/* button style */
+button {
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border: none;
+    border-radius: 1.1em;
+    background-color: #212121;
+    cursor: pointer;
+    color: white;
+    padding: 1em 2em;
+    transition: box-shadow ease-in-out 0.3s, background-color ease-in-out 0.1s, letter-spacing ease-in-out 0.1s, transform ease-in-out 0.1s;
+}
+button:active {
+    box-shadow: var(--gold) 0px 0px 30px 5px;
+    background-color: var(--gold);
+    transform: scale(0.95);
+}
+
+header{
+    background-color: var(--gray);
+}
+/* Header-top */
+#header-top{
+    display: flex;
+    padding: 20px 20% 20px 20%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dark);
+    color: white;
+}
+#header-top > div{
+    display: flex;
+    justify-content: center;
+}
+#header-top p, #header-top-right-side i{
+    padding: 0 10px 0 10px;
+    transition: 0.2s all;
+}
+#header-top-left-side i{
+    color: var(--gold);
+}
+#header-top-right-side i:hover{
+    color: var(--gold);
+    transform: translateY(-10px);
+}
+
+
+/* header-bottom */
+#header-bottom{
+    display: flex;
+    padding: 0 20% 20px 20%;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    transform: translateY(-10px);
+}
+#header-bottom img{
+    width: 100px;
+}
+#header-bottom-left-side a{
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 1.25rem;
+}
+.for-padding{
+    padding-right: 20px;
+}
+#header-bottom-left-side span{
+    background-color: var(--gold);
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+}
+
+
+/* hero */
+#hero{
+    background-color: var(--gray);
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+#hero-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hero-container > div{
+    width: 50%;
+}
+#hero-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#hero-left h3{
+    color: var(--gold);
+    padding-bottom: 30px;
+}
+#hero h1{
+    font-family: "Ubuntu";
+    font-size: 5rem;
+    font-weight: normal;
+    padding-bottom: 50px;
+}
+#hero-left span{
+    background-color: var(--gold);
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    margin-top: 50px;
+    width: max-content;
+    font-weight: bold;
+}
+#hero-right{
+    display: flex;
+    justify-content: flex-end;
+}
+#hero-right img{
+    width: 70%;
+}
+
+
+/* booking */
+#booking-div{
+    margin-top: 50px;
+    background-color: white;
+    padding: 40px;
+}
+#booking-container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 30px;
+}
+#booking-container > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#booking-div input{
+    border: 2px solid transparent;
+    width: 15em;
+    height: 2.5em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #afafaf;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+#booking-div select{
+    border: 2px solid transparent;
+    outline: none;
+    overflow: hidden;
+    background-color: #afafaf;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+#booking-div input:hover, #booking-div input:focus,
+#booking-div select:hover, #booking-div select:focus{
+    border: 2px solid var(--gold);
+    box-shadow: 0px 0px 0px 2px var(--dark);
+    background-color: white;
+    color: black;
+}
+#sure_to_make_a_book{
+    margin-bottom: 20px;
+}
+  
+
+/* about-us */
+#about-us{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about-us > div{
+    width: 50%;
+}
+#about-us-right-side h3{
+    color: var(--gold);
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+#about-us-right-side h2{
+    font-family: "ubuntu";
+    font-size: 4rem;
+    font-weight: 100;
+    padding-bottom: 30px;
+}
+#about-us-container{
+    padding-top: 30px;
+    display: flex;
+}
+#about-us-container span{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#about-span{
+    margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav h3 {
+    font-size: 1.6em;
+    color: #333;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+#user_profile {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 12px;
+    border: 2px solid #007bff;
+}
+
+#user_name {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Form Styles */
+form {
+    display:none;
+    flex-direction: column;
+    gap:10px;
+    width:30vw;
+    min-width: 650px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+form section{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+form h1 {
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    cursor: pointer;
+    margin-right: 12px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+#error_message,
+#account_already_exist {
+    color: #ff6f61;
+    margin-top: 10px;
+    font-size: 0.95em;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+#sign_out_but{
+    display:none;
+}
+
+#sign_up, #sign_in{
+    display:none;
+    width:30vw;
+    flex-direction: column;
+    gap:10px;
+}
+
+#sign_up section, #sign_in section{
+    display:flex;
+    justify-content: space-between;
+}
+
+#error_message, #account_already_exist, #booking_error_message{
+    color:black;
+    display:none;
+    position:absolute;
+    border:1px solid;
+    border-radius:10px;
+    background-color: white;
+    padding:10px;
+}
+
+.sign_out_but{
+    display:none;
+}
+
+#sure_to_make_a_book, #not_sure_to_make_a_book{
+    display:none;
+}
+
+#profile{
+    display:none;
+}

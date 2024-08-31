@@ -1,0 +1,120 @@
+nav {
+  color: #fff;
+  background-color: #00aeff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  display: flex;
+}
+
+body {
+  margin: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navlinks {
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  display: flex;
+}
+
+.navlinks div {
+  gap: 1vw;
+  display: flex;
+}
+
+.signforms {
+  align-items: center;
+  gap: 5px;
+  display: flex;
+}
+
+.signforms button {
+  color: #00f;
+  background-color: #0000;
+  border: 2px solid #00f;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 17px;
+  font-weight: 900;
+  transition: all .5s;
+}
+
+.signforms button:hover {
+  color: #fff;
+  background-color: #00f;
+}
+
+.signforms button:active {
+  color: #fff;
+  background-color: #00f;
+  box-shadow: 0 0 20px #00f;
+}
+
+.indexlink h3 {
+  margin: 0;
+}
+
+.mainForms {
+  justify-content: center;
+  display: flex;
+}
+
+.container {
+  background-color: #d3d3d3;
+  border: none;
+  border-radius: 20px;
+  flex-direction: column;
+  gap: 5px;
+  width: 50%;
+  margin: 10vh;
+  padding: 20px;
+  display: flex;
+}
+
+.signing {
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
+}
+
+.accaunt button, #resetSignIn, #submitSignIn {
+  color: #00f;
+  background-color: #0000;
+  border: 1px solid #00f;
+  border-radius: 3px;
+  padding: 3px 7px;
+  transition: all .5s;
+}
+
+.accaunt button:hover, #resetSignIn:hover, #submitSignIn:hover {
+  color: #fff;
+  background-color: #00f;
+}
+
+.accaunt button:active, #resetSignIn:active, #submitSignIn:active {
+  color: #fff;
+  background-color: #00f;
+  box-shadow: 0 0 10px #00f;
+}
+
+.accaunt {
+  text-decoration: none;
+}
+
+.signing input {
+  border: 1px solid #00f;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px 3px;
+}
+
+.signing input:focus {
+  outline: 1px solid #00f;
+}
+/*# sourceMappingURL=index.2cdaf7bc.css.map */

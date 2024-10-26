@@ -1,2 +1,1 @@
-const container = document.querySelector('table');
-
+// No classwork to upload :(
